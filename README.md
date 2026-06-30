@@ -2,9 +2,12 @@
 
 A robust, real-time API monitoring service and dashboard. This monorepo contains both the Ruby on Rails backend API and the React/Vite frontend dashboard for tracking endpoint health, uptime, and latency via asynchronous background workers.
 
+![Dark Mode Dashboard](images/Dark_Mode.png)
+![Light Mode Dashboard](images/Light_Mode.png)
+
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 ### Backend (`/monitor_api`)
 - **Framework:** Ruby on Rails (API Mode)
@@ -19,7 +22,7 @@ A robust, real-time API monitoring service and dashboard. This monorepo contains
 
 ---
 
-## ✨ Features
+## Features
 
 - **Real-time Monitoring:** Tracks HTTP status codes and response latency (in milliseconds).
 - **Asynchronous Pings:** Background jobs automatically ping registered endpoints at configurable intervals.
@@ -29,7 +32,7 @@ A robust, real-time API monitoring service and dashboard. This monorepo contains
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Ruby 3.x+
@@ -63,7 +66,7 @@ The application will be available at `http://localhost:5173`.
 
 ---
 
-## ⚙️ Environment Variables
+## Environment Variables
 
 ### Backend (`monitor_api`)
 To run the backend securely, configure these variables (or use a `.env` file):
@@ -76,8 +79,8 @@ Create a `.env.local` file in `monitor_web` to point to the API:
 
 ---
 
-## 🤝 Contributing
+## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## 📄 License
+## License
 [MIT](https://choosealicense.com/licenses/mit/)
