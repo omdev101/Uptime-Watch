@@ -1,0 +1,13 @@
+# Root .gitignore for monorepo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Note: Subdirectories (monitor_api, monitor_web) have their own .gitignore files 
+# that handle their specific dependencies (e.g. node_modules, /log, etc.)
