@@ -1,60 +1,83 @@
-# Uptime Watch API
+# Uptime Watch
 
-A robust, real-time API monitoring service built with Ruby on Rails and PostgreSQL. It tracks endpoint health, uptime, and latency via asynchronous background workers.
+A robust, real-time API monitoring service and dashboard. This monorepo contains both the Ruby on Rails backend API and the React/Vite frontend dashboard for tracking endpoint health, uptime, and latency via asynchronous background workers.
 
-## Tech Stack
+---
+
+## 🛠 Tech Stack
+
+### Backend (`/monitor_api`)
 - **Framework:** Ruby on Rails (API Mode)
 - **Database:** PostgreSQL
 - **Background Jobs:** Solid Queue
 - **Concurrency:** Concurrent HTTP requests via background workers
 
-## Features
+### Frontend (`/monitor_web`)
+- **Framework:** React + TypeScript
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS
+
+---
+
+## ✨ Features
+
 - **Real-time Monitoring:** Tracks HTTP status codes and response latency (in milliseconds).
 - **Asynchronous Pings:** Background jobs automatically ping registered endpoints at configurable intervals.
-- **Environment Tagging:** Organizes endpoints by environment (Production, Staging, Development).
+- **Interactive Dashboard:** Sleek, dark-mode optimized React frontend with sparkline charts, environment filtering, and a `⌘K` command palette.
 - **Custom Headers:** Supports custom JSON headers for pinging authenticated or protected routes.
+- **Environment Tagging:** Organizes endpoints by environment (Production, Staging, Development).
 
-## Prerequisites
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
 - Ruby 3.x+
+- Node.js (v16+) and npm
 - PostgreSQL
-- Redis (optional, depending on Solid Queue configuration)
 
-## Getting Started
+### 1. Backend Setup (`monitor_api`)
+Navigate to the backend directory, install dependencies, and setup the database.
+```bash
+cd monitor_api
+bundle install
+rails db:setup
+rails db:migrate
+```
+Start the Rails server (and ensure Solid Queue background workers are running):
+```bash
+rails server
+```
 
-1. **Clone the repository:**
-   ```bash
-   git clone <your-repo-url>
-   cd monitor_api
-   ```
+### 2. Frontend Setup (`monitor_web`)
+In a new terminal window, navigate to the frontend directory and install dependencies.
+```bash
+cd monitor_web
+npm install
+```
+Start the Vite development server:
+```bash
+npm run dev
+```
+The application will be available at `http://localhost:5173`.
 
-2. **Install dependencies:**
-   ```bash
-   bundle install
-   ```
+---
 
-3. **Database setup:**
-   Ensure PostgreSQL is running, then initialize the database and run migrations:
-   ```bash
-   rails db:setup
-   rails db:migrate
-   ```
+## ⚙️ Environment Variables
 
-4. **Start the server and background workers:**
-   ```bash
-   # Starts the Puma server on port 3000
-   rails server
-   ```
-   *(Note: Ensure your Solid Queue workers are running to process endpoint health checks.)*
-
-## Environment Variables
-
-To run the application securely, you may need to configure the following environment variables (or place them in a `.env` file):
-
+### Backend (`monitor_api`)
+To run the backend securely, configure these variables (or use a `.env` file):
 - `DATABASE_URL` (PostgreSQL connection string)
 - `RAILS_MASTER_KEY` (For decrypting credentials)
 
-## Contributing
+### Frontend (`monitor_web`)
+Create a `.env.local` file in `monitor_web` to point to the API:
+- `VITE_API_URL=http://localhost:3000`
+
+---
+
+## 🤝 Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## License
+## 📄 License
 [MIT](https://choosealicense.com/licenses/mit/)
