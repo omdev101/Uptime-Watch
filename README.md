@@ -6,10 +6,10 @@ A robust, real-time API monitoring service and dashboard. This monorepo contains
 
 ## Screenshots  
 ### Dark Mode
-  <img src="images/Dark_Mode.png" alt="Uptime Watch - Dark Mode Dashboard" width="49%" />
-  
+  <img src="images/Dark_Mode.png" alt="Uptime Watch - Dark Mode Dashboard" />
+
 ### Light Mode
-  <img src="images/Light_Mode.png" alt="Uptime Watch - Light Mode Dashboard" width="49%" />
+  <img src="images/Light_Mode.png" alt="Uptime Watch - Light Mode Dashboard" />
 </p>
 
 ---
