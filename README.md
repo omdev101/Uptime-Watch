@@ -3,8 +3,12 @@
 A robust, real-time API monitoring service and dashboard. This monorepo contains both the Ruby on Rails backend API and the React/Vite frontend dashboard for tracking endpoint health, uptime, and latency via asynchronous background workers.
 
 <p align="center">
+
+## Screenshots  
+### Dark Mode
   <img src="images/Dark_Mode.png" alt="Uptime Watch - Dark Mode Dashboard" width="49%" />
-  &nbsp;
+  
+### Light Mode
   <img src="images/Light_Mode.png" alt="Uptime Watch - Light Mode Dashboard" width="49%" />
 </p>
 
