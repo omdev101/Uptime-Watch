@@ -557,7 +557,6 @@ function App() {
             const endpointPings = endpoint.ping_results.length;
             const endpointUpCount = endpoint.ping_results.filter(p => p.status_code === expected).length;
             const endpointUptime = endpointPings > 0 ? ((endpointUpCount / endpointPings) * 100).toFixed(2) : '100.00';
-            const minLat = latencyHistory.length > 0 ? Math.min(...latencyHistory) : 0;
             const maxLat = latencyHistory.length > 0 ? Math.max(...latencyHistory) : 0;
             const avgLat = latencyHistory.length > 0 ? Math.round(latencyHistory.reduce((a,b)=>a+b,0) / latencyHistory.length) : 0;
             
