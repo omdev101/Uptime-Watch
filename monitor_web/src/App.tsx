@@ -26,7 +26,7 @@ interface Toast {
   type: 'success' | 'error' | 'info'
 }
 
-const API_URL = "http://localhost:3000"
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000"
 
 function Sparkline({ data, isUp }: { data: number[], isUp: boolean }) {
   if (data.length < 2) return (
